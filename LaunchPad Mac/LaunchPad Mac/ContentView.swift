@@ -10,6 +10,7 @@ import CombineMIDI
 
 struct ContentView: View {
     let commandDispatcher = CommandDispatcher()
+    let doNotDisturbSwitcher = DoNotDisturbSwitcher()
     let midiPublisher: MIDIPublisher
     @State var selectedPad: UInt8? = 99
 
@@ -53,6 +54,18 @@ struct ContentView: View {
         .onReceive(midiPublisher.receive(on: RunLoop.main), perform: { message in
             if message.status == .noteOn {
                 self.selectedPad = message.data1
+
+
+                // dnd
+                if self.selectedPad == 43 {
+                    self.doNotDisturbSwitcher.enableDND()
+                } else if self.selectedPad == 39 {
+                    self.doNotDisturbSwitcher.disableDND()
+                }
+
+
+
+
             } else {
                 self.selectedPad = 99
             }

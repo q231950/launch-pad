@@ -33,23 +33,23 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         window.contentView = NSHostingView(rootView: contentView)
         window.makeKeyAndOrderFront(nil)
 
-        channelCancellable = client
-            .publisher()
-            .filter { $0.status == .noteOn || $0.status == .noteOff }
-//            .map { $0.data1 }
-            .receive(on: RunLoop.main)
-            .sink { value in
-                print("Input Device is \(value)")
-        }
-
-        cancellable = client
-            .publisher()
-            .filter { $0.status == .controlChange }
-//            .map { $0.data2 }
-            .receive(on: RunLoop.main)
-            .sink { value in
-                print("Device: \(value.data1) Value: \(value.data2)")
-        }
+//        channelCancellable = client
+//            .publisher()
+//            .filter { $0.status == .noteOn || $0.status == .noteOff }
+////            .map { $0.data1 }
+//            .receive(on: RunLoop.main)
+//            .sink { value in
+//                print("Input Device is \(value)")
+//        }
+//
+//        cancellable = client
+//            .publisher()
+//            .filter { $0.status == .controlChange }
+////            .map { $0.data2 }
+//            .receive(on: RunLoop.main)
+//            .sink { value in
+//                print("Device: \(value.data1) Value: \(value.data2)")
+//        }
 
         
 

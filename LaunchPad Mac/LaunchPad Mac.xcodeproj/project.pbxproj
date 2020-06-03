@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		FD7017C82486C2B800C35835 /* CommandDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7017C72486C2B800C35835 /* CommandDispatcher.swift */; };
 		FD7017CC2486D12300C35835 /* CommandsCore in Frameworks */ = {isa = PBXBuildFile; productRef = FD7017CB2486D12300C35835 /* CommandsCore */; };
+		FDE09EF824881EF600FC4F49 /* DoNotDisturbSwitcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE09EF724881EF600FC4F49 /* DoNotDisturbSwitcher.swift */; };
 		FDF4BAAD248419B700718B73 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF4BAAC248419B700718B73 /* AppDelegate.swift */; };
 		FDF4BAAF248419B700718B73 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF4BAAE248419B700718B73 /* ContentView.swift */; };
 		FDF4BAB1248419BB00718B73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDF4BAB0248419BB00718B73 /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 /* Begin PBXFileReference section */
 		FD7017C72486C2B800C35835 /* CommandDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandDispatcher.swift; sourceTree = "<group>"; };
 		FD7017C92486D11100C35835 /* commands */ = {isa = PBXFileReference; lastKnownFileType = folder; name = commands; path = ../../commands; sourceTree = "<group>"; };
+		FDE09EF724881EF600FC4F49 /* DoNotDisturbSwitcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoNotDisturbSwitcher.swift; sourceTree = "<group>"; };
 		FDF4BAA9248419B700718B73 /* LaunchPad Mac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LaunchPad Mac.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDF4BAAC248419B700718B73 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FDF4BAAE248419B700718B73 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 				FDF4BAAC248419B700718B73 /* AppDelegate.swift */,
 				FDF4BAAE248419B700718B73 /* ContentView.swift */,
 				FD7017C72486C2B800C35835 /* CommandDispatcher.swift */,
+				FDE09EF724881EF600FC4F49 /* DoNotDisturbSwitcher.swift */,
 				FDF4BAB0248419BB00718B73 /* Assets.xcassets */,
 				FDF4BAB5248419BB00718B73 /* Main.storyboard */,
 				FDF4BAB8248419BB00718B73 /* Info.plist */,
@@ -171,6 +174,7 @@
 				FD7017C82486C2B800C35835 /* CommandDispatcher.swift in Sources */,
 				FDF4BAAF248419B700718B73 /* ContentView.swift in Sources */,
 				FDF4BAAD248419B700718B73 /* AppDelegate.swift in Sources */,
+				FDE09EF824881EF600FC4F49 /* DoNotDisturbSwitcher.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
