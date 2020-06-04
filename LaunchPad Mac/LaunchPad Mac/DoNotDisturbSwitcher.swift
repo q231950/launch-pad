@@ -7,9 +7,20 @@
 
 import Foundation
 
-struct DoNotDisturbSwitcher {
+class DoNotDisturbSwitcher {
 
-    func enableDND(){
+    private var on: Bool = false
+
+    func toggle() {
+        if on {
+            disableDND()
+        } else {
+            enableDND()
+        }
+        on.toggle()
+    }
+
+    private func enableDND(){
 
         CFPreferencesSetValue("dndStart" as CFString, CGFloat(0) as CFPropertyList, "com.apple.notificationcenterui" as CFString, kCFPreferencesCurrentUser, kCFPreferencesCurrentHost)
 
@@ -21,7 +32,7 @@ struct DoNotDisturbSwitcher {
         commitDNDChanges()
     }
 
-    func disableDND(){
+    private func disableDND(){
         CFPreferencesSetValue("dndStart" as CFString, nil, "com.apple.notificationcenterui" as CFString, kCFPreferencesCurrentUser, kCFPreferencesCurrentHost)
 
         CFPreferencesSetValue("dndEnd" as CFString, nil, "com.apple.notificationcenterui" as CFString, kCFPreferencesCurrentUser, kCFPreferencesCurrentHost)

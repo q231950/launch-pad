@@ -9,73 +9,25 @@ import SwiftUI
 import CombineMIDI
 
 struct ContentView: View {
-    let commandDispatcher = CommandDispatcher()
-    let doNotDisturbSwitcher = DoNotDisturbSwitcher()
-    let midiPublisher: MIDIPublisher
-    @State var selectedPad: UInt8? = 99
+    @ObservedObject var padProvider: PadProvider
 
     var body: some View {
         VStack {
-            HStack {
-                Rectangle()
-                    .fill(fill(for: 40))
-                    .frame(width: 200, height: 200)
-
-                Rectangle()
-                    .fill(fill(for: 41))
-                    .frame(width: 200, height: 200)
-
-                Rectangle()
-                    .fill(fill(for: 42))
-                    .frame(width: 200, height: 200)
-
-                Rectangle()
-                    .fill(fill(for: 43))
-                    .frame(width: 200, height: 200)
-            }
-            HStack {
-                Rectangle()
-                    .fill(fill(for: 36))
-                    .frame(width: 200, height: 200)
-
-                Rectangle()
-                    .fill(fill(for: 37))
-                    .frame(width: 200, height: 200)
-
-                Rectangle()
-                    .fill(fill(for: 38))
-                    .frame(width: 200, height: 200)
-
-                Rectangle()
-                    .fill(fill(for: 39))
-                    .frame(width: 200, height: 200)
+            ForEach(padProvider.rows, id: \.self) { row in
+                HStack {
+                    ForEach(row.pads, id: \.self) { pad in
+                        Rectangle()
+                            .fill(self.fill(for: pad))
+                            .frame(width: 200, height: 200)
+                    }
+                }
             }
         }
-        .onReceive(midiPublisher.receive(on: RunLoop.main), perform: { message in
-            if message.status == .noteOn {
-                self.selectedPad = message.data1
-
-                // DND
-                // macOS https://stackoverflow.com/a/45645595
-                // slackOS https://api.slack.com/docs/presence-and-status
-                if self.selectedPad == 43 {
-
-                    self.doNotDisturbSwitcher.enableDND()
-                } else if self.selectedPad == 39 {
-                    self.doNotDisturbSwitcher.disableDND()
-                }
-
-            } else {
-                self.selectedPad = 99
-            }
-        })
     }
 
-    func fill(for pad: UInt8) -> Color {
-        if let selectedPad = selectedPad {
-            if selectedPad == pad {
-                return Color.orange
-            }
+    func fill(for pad: Pad) -> Color {
+        if pad.selected {
+            return Color.orange
         }
 
         return Color.black
@@ -86,6 +38,7 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         let client = MIDIClient(name: "My app MIDI client")
-        return ContentView(midiPublisher: client.publisher())
+        let padProvider = PadProvider(midiPublisher: client.publisher())
+        return ContentView(padProvider: padProvider)
     }
 }

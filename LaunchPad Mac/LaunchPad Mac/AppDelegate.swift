@@ -21,7 +21,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Create the SwiftUI view that provides the window contents.
         let client = MIDIClient(name: "My app MIDI client")
-        let contentView = ContentView(midiPublisher: client.publisher())
+        let padProvider = PadProvider(midiPublisher: client.publisher())
+        let contentView = ContentView(padProvider: padProvider)
 
         // Create the window and set the content view. 
         window = NSWindow(
