@@ -10,7 +10,7 @@ import CommandsCore
 
 struct CommandDispatcher {
 
-    func dispatch() {
+    func dispatch(command: Command) {
         let commandExecutor = CommandExecutor()
         commandExecutor.outputHandler = { text in
             print(text)
@@ -24,7 +24,7 @@ struct CommandDispatcher {
 
             NSUserNotificationCenter.default.deliver(notification)
         }
-        let command = Command(launchPath: "/bin/zsh", arguments: ["-lc", "( cd ~ && ls )"])
+
         commandExecutor.execute(command)
     }
 }

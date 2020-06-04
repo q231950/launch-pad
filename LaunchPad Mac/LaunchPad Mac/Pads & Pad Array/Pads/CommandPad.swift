@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import CommandsCore
 
 class CommandPad: Pad {
     let commandDispatcher = CommandDispatcher()
@@ -13,7 +14,10 @@ class CommandPad: Pad {
     override var selected: Bool {
         didSet {
             if selected {
-                commandDispatcher.dispatch()
+                DispatchQueue.main.async {
+                    let command = Command(launchPath: "/bin/zsh", arguments: ["-lc", "( cd ~ && ls )"])
+                    self.commandDispatcher.dispatch(command: command)
+                }
             }
         }
     }

@@ -59,8 +59,7 @@
 			children = (
 				FD45EE58248974E800B7717B /* PadArray.swift */,
 				FD45EE542489749600B7717B /* Pad.swift */,
-				FD45EE56248974B500B7717B /* DoNotDisturbPad.swift */,
-				FDA88C312489767C00132B31 /* CommandPad.swift */,
+				FDF95A8524898316008A6694 /* Pads */,
 			);
 			path = "Pads & Pad Array";
 			sourceTree = "<group>";
@@ -113,6 +112,15 @@
 				FDF4BAB3248419BB00718B73 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FDF95A8524898316008A6694 /* Pads */ = {
+			isa = PBXGroup;
+			children = (
+				FD45EE56248974B500B7717B /* DoNotDisturbPad.swift */,
+				FDA88C312489767C00132B31 /* CommandPad.swift */,
+			);
+			path = Pads;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
