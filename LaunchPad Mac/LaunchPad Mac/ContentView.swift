@@ -55,16 +55,15 @@ struct ContentView: View {
             if message.status == .noteOn {
                 self.selectedPad = message.data1
 
-
-                // dnd
+                // DND
+                // macOS https://stackoverflow.com/a/45645595
+                // slackOS https://api.slack.com/docs/presence-and-status
                 if self.selectedPad == 43 {
+
                     self.doNotDisturbSwitcher.enableDND()
                 } else if self.selectedPad == 39 {
                     self.doNotDisturbSwitcher.disableDND()
                 }
-
-
-
 
             } else {
                 self.selectedPad = 99
