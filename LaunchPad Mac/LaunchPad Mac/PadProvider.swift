@@ -13,8 +13,16 @@ class PadProvider: ObservableObject {
     let midiPublisher: MIDIPublisher
     var cancellableMIDISink: AnyCancellable?
 
-    var rows = [PadArray(pads: [Pad(identifier: 40), Pad(identifier: 41), Pad(identifier: 42), DoNotDisturbPad(identifier: 43)]),
-                PadArray(pads: [Pad(identifier: 36), Pad(identifier: 37), Pad(identifier: 38), Pad(identifier: 39)])]
+    var rows = [PadArray(pads: [
+        CommandPad(identifier: 40),
+        Pad(identifier: 41),
+        Pad(identifier: 42),
+        DoNotDisturbPad(identifier: 43)]),
+                PadArray(pads: [
+                    Pad(identifier: 36),
+                    Pad(identifier: 37),
+                    Pad(identifier: 38),
+                    Pad(identifier: 39)])]
 
     init(midiPublisher: MIDIPublisher) {
 

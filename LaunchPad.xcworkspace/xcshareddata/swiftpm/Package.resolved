@@ -9,6 +9,15 @@
           "revision": "ebb18ac55a9a22e916d7ff645ea7a9f867701f2a",
           "version": "0.1.0"
         }
+      },
+      {
+        "package": "Commands",
+        "repositoryURL": "https://github.com/q231950/commands.git",
+        "state": {
+          "branch": null,
+          "revision": "5fd2b19ca6c3249edce3bfacb5f00188f9512266",
+          "version": "0.1.3"
+        }
       }
     ]
   },
