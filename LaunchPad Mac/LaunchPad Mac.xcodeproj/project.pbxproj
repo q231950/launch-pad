@@ -21,6 +21,7 @@
 		FDF4BAB4248419BB00718B73 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDF4BAB3248419BB00718B73 /* Preview Assets.xcassets */; };
 		FDF4BAB7248419BB00718B73 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDF4BAB5248419BB00718B73 /* Main.storyboard */; };
 		FDF4BAC1248419EE00718B73 /* CombineMIDI in Frameworks */ = {isa = PBXBuildFile; productRef = FDF4BAC0248419EE00718B73 /* CombineMIDI */; };
+		FDF95A87248A5079008A6694 /* SoundPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF95A86248A5079008A6694 /* SoundPad.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		FDF4BAB6248419BB00718B73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FDF4BAB8248419BB00718B73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FDF4BAB9248419BB00718B73 /* LaunchPad_Mac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LaunchPad_Mac.entitlements; sourceTree = "<group>"; };
+		FDF95A86248A5079008A6694 /* SoundPad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundPad.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 			children = (
 				FD45EE56248974B500B7717B /* DoNotDisturbPad.swift */,
 				FDA88C312489767C00132B31 /* CommandPad.swift */,
+				FDF95A86248A5079008A6694 /* SoundPad.swift */,
 			);
 			path = Pads;
 			sourceTree = "<group>";
@@ -204,6 +207,7 @@
 				FDA88C322489767C00132B31 /* CommandPad.swift in Sources */,
 				FD45EE522489603000B7717B /* PadProvider.swift in Sources */,
 				FD45EE57248974B500B7717B /* DoNotDisturbPad.swift in Sources */,
+				FDF95A87248A5079008A6694 /* SoundPad.swift in Sources */,
 				FD7017C82486C2B800C35835 /* CommandDispatcher.swift in Sources */,
 				FDF4BAAF248419B700718B73 /* ContentView.swift in Sources */,
 				FD45EE552489749600B7717B /* Pad.swift in Sources */,

@@ -15,8 +15,8 @@ class PadProvider: ObservableObject {
 
     var rows = [PadArray(pads: [
         CommandPad(identifier: 40),
-        Pad(identifier: 41),
-        Pad(identifier: 42),
+        SoundPad(identifier: 41, sound: "Purr"),
+        SoundPad(identifier: 42, sound: "Pop"),
         DoNotDisturbPad(identifier: 43)]),
                 PadArray(pads: [
                     Pad(identifier: 36),
