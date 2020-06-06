@@ -18,6 +18,7 @@ class DoNotDisturbSwitcher {
         }
     }
 
+    /// Toggles the Do Not Disturb state.
     func toggle() {
         if on {
             disableDND()

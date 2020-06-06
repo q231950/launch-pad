@@ -17,9 +17,7 @@ extension Action {
         }
 
         func perform() {
-            DispatchQueue.main.async {
-                NSSound(named: self.sound)?.play()
-            }
+            NSSound(named: self.sound)?.play()
         }
     }
 }

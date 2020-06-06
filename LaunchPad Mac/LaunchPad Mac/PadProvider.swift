@@ -15,14 +15,14 @@ class PadProvider: ObservableObject {
 
     var rows = [PadArray(pads: [
         Pad(identifier: 40, action: Action.Command(command: "( cd ~ && ls )")),
-        Pad(identifier: 41, action: Action.Sound("Purr")),
-        Pad(identifier: 42, action: Action.Sound("Pop")),
+        Pad(identifier: 41),
+        Pad(identifier: 42),
         Pad(identifier: 43, action: Action.DoNotDisturb())]),
                 PadArray(pads: [
-                    Pad(identifier: 36),
-                    Pad(identifier: 37),
-                    Pad(identifier: 38),
-                    Pad(identifier: 39)])]
+                    Pad(identifier: 36, action: Action.Sound("Hero")),
+                    Pad(identifier: 37, action: Action.Sound("Basso")),
+                    Pad(identifier: 38, action: Action.Sound("Submarine")),
+                    Pad(identifier: 39, action: Action.Sound("Blow"))])]
 
     init(midiPublisher: MIDIPublisher) {
 
