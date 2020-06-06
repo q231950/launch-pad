@@ -11,10 +11,18 @@ class Pad: Hashable {
 
     let identifier: UInt8
     let uuid = UUID().uuidString
-    var selected: Bool = false
+    var action: Actionable?
+    var selected: Bool = false {
+        didSet {
+            if selected {
+                action?.perform()
+            }
+        }
+    }
 
-    init(identifier: UInt8) {
+    init(identifier: UInt8, action: Actionable? = nil) {
         self.identifier = identifier
+        self.action = action
     }
 
     static func == (lhs: Pad, rhs: Pad) -> Bool {

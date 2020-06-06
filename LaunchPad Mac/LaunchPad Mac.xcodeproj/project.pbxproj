@@ -9,11 +9,10 @@
 /* Begin PBXBuildFile section */
 		FD45EE522489603000B7717B /* PadProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD45EE512489603000B7717B /* PadProvider.swift */; };
 		FD45EE552489749600B7717B /* Pad.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD45EE542489749600B7717B /* Pad.swift */; };
-		FD45EE57248974B500B7717B /* DoNotDisturbPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD45EE56248974B500B7717B /* DoNotDisturbPad.swift */; };
+		FD45EE57248974B500B7717B /* CommandAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD45EE56248974B500B7717B /* CommandAction.swift */; };
 		FD45EE59248974E800B7717B /* PadArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD45EE58248974E800B7717B /* PadArray.swift */; };
 		FD7017C82486C2B800C35835 /* CommandDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7017C72486C2B800C35835 /* CommandDispatcher.swift */; };
 		FDA88C302489760E00132B31 /* CommandsCore in Frameworks */ = {isa = PBXBuildFile; productRef = FDA88C2F2489760E00132B31 /* CommandsCore */; };
-		FDA88C322489767C00132B31 /* CommandPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA88C312489767C00132B31 /* CommandPad.swift */; };
 		FDE09EF824881EF600FC4F49 /* DoNotDisturbSwitcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE09EF724881EF600FC4F49 /* DoNotDisturbSwitcher.swift */; };
 		FDF4BAAD248419B700718B73 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF4BAAC248419B700718B73 /* AppDelegate.swift */; };
 		FDF4BAAF248419B700718B73 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF4BAAE248419B700718B73 /* ContentView.swift */; };
@@ -21,16 +20,17 @@
 		FDF4BAB4248419BB00718B73 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDF4BAB3248419BB00718B73 /* Preview Assets.xcassets */; };
 		FDF4BAB7248419BB00718B73 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDF4BAB5248419BB00718B73 /* Main.storyboard */; };
 		FDF4BAC1248419EE00718B73 /* CombineMIDI in Frameworks */ = {isa = PBXBuildFile; productRef = FDF4BAC0248419EE00718B73 /* CombineMIDI */; };
-		FDF95A87248A5079008A6694 /* SoundPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF95A86248A5079008A6694 /* SoundPad.swift */; };
+		FDF95A87248A5079008A6694 /* SoundAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF95A86248A5079008A6694 /* SoundAction.swift */; };
+		FDF95A8B248C116D008A6694 /* DoNotDisturbAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF95A8A248C116D008A6694 /* DoNotDisturbAction.swift */; };
+		FDF95A8D248C125B008A6694 /* ActionableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF95A8C248C125B008A6694 /* ActionableProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FD45EE512489603000B7717B /* PadProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PadProvider.swift; sourceTree = "<group>"; };
 		FD45EE542489749600B7717B /* Pad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pad.swift; sourceTree = "<group>"; };
-		FD45EE56248974B500B7717B /* DoNotDisturbPad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoNotDisturbPad.swift; sourceTree = "<group>"; };
+		FD45EE56248974B500B7717B /* CommandAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandAction.swift; sourceTree = "<group>"; };
 		FD45EE58248974E800B7717B /* PadArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PadArray.swift; sourceTree = "<group>"; };
 		FD7017C72486C2B800C35835 /* CommandDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandDispatcher.swift; sourceTree = "<group>"; };
-		FDA88C312489767C00132B31 /* CommandPad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandPad.swift; sourceTree = "<group>"; };
 		FDE09EF724881EF600FC4F49 /* DoNotDisturbSwitcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoNotDisturbSwitcher.swift; sourceTree = "<group>"; };
 		FDF4BAA9248419B700718B73 /* LaunchPad Mac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LaunchPad Mac.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDF4BAAC248419B700718B73 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -40,7 +40,9 @@
 		FDF4BAB6248419BB00718B73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FDF4BAB8248419BB00718B73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FDF4BAB9248419BB00718B73 /* LaunchPad_Mac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LaunchPad_Mac.entitlements; sourceTree = "<group>"; };
-		FDF95A86248A5079008A6694 /* SoundPad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundPad.swift; sourceTree = "<group>"; };
+		FDF95A86248A5079008A6694 /* SoundAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundAction.swift; sourceTree = "<group>"; };
+		FDF95A8A248C116D008A6694 /* DoNotDisturbAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoNotDisturbAction.swift; sourceTree = "<group>"; };
+		FDF95A8C248C125B008A6694 /* ActionableProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionableProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +63,6 @@
 			children = (
 				FD45EE58248974E800B7717B /* PadArray.swift */,
 				FD45EE542489749600B7717B /* Pad.swift */,
-				FDF95A8524898316008A6694 /* Pads */,
 			);
 			path = "Pads & Pad Array";
 			sourceTree = "<group>";
@@ -97,12 +98,8 @@
 				FDF4BAAE248419B700718B73 /* ContentView.swift */,
 				FD45EE512489603000B7717B /* PadProvider.swift */,
 				FD45EE532489748A00B7717B /* Pads & Pad Array */,
-				FD7017C72486C2B800C35835 /* CommandDispatcher.swift */,
-				FDE09EF724881EF600FC4F49 /* DoNotDisturbSwitcher.swift */,
-				FDF4BAB0248419BB00718B73 /* Assets.xcassets */,
-				FDF4BAB5248419BB00718B73 /* Main.storyboard */,
-				FDF4BAB8248419BB00718B73 /* Info.plist */,
-				FDF4BAB9248419BB00718B73 /* LaunchPad_Mac.entitlements */,
+				FDF95A8524898316008A6694 /* Actions */,
+				FDF95A91248C1348008A6694 /* Resources */,
 				FDF4BAB2248419BB00718B73 /* Preview Content */,
 			);
 			path = "LaunchPad Mac";
@@ -116,14 +113,52 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		FDF95A8524898316008A6694 /* Pads */ = {
+		FDF95A8524898316008A6694 /* Actions */ = {
 			isa = PBXGroup;
 			children = (
-				FD45EE56248974B500B7717B /* DoNotDisturbPad.swift */,
-				FDA88C312489767C00132B31 /* CommandPad.swift */,
-				FDF95A86248A5079008A6694 /* SoundPad.swift */,
+				FDF95A8C248C125B008A6694 /* ActionableProtocol.swift */,
+				FDF95A8E248C12B8008A6694 /* Command Action */,
+				FDF95A8F248C12C8008A6694 /* Do-Not-Disturb Action */,
+				FDF95A90248C131E008A6694 /* Sound Action */,
 			);
-			path = Pads;
+			path = Actions;
+			sourceTree = "<group>";
+		};
+		FDF95A8E248C12B8008A6694 /* Command Action */ = {
+			isa = PBXGroup;
+			children = (
+				FD45EE56248974B500B7717B /* CommandAction.swift */,
+				FD7017C72486C2B800C35835 /* CommandDispatcher.swift */,
+			);
+			path = "Command Action";
+			sourceTree = "<group>";
+		};
+		FDF95A8F248C12C8008A6694 /* Do-Not-Disturb Action */ = {
+			isa = PBXGroup;
+			children = (
+				FDF95A8A248C116D008A6694 /* DoNotDisturbAction.swift */,
+				FDE09EF724881EF600FC4F49 /* DoNotDisturbSwitcher.swift */,
+			);
+			path = "Do-Not-Disturb Action";
+			sourceTree = "<group>";
+		};
+		FDF95A90248C131E008A6694 /* Sound Action */ = {
+			isa = PBXGroup;
+			children = (
+				FDF95A86248A5079008A6694 /* SoundAction.swift */,
+			);
+			path = "Sound Action";
+			sourceTree = "<group>";
+		};
+		FDF95A91248C1348008A6694 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FDF4BAB0248419BB00718B73 /* Assets.xcassets */,
+				FDF4BAB5248419BB00718B73 /* Main.storyboard */,
+				FDF4BAB8248419BB00718B73 /* Info.plist */,
+				FDF4BAB9248419BB00718B73 /* LaunchPad_Mac.entitlements */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,16 +239,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FDA88C322489767C00132B31 /* CommandPad.swift in Sources */,
 				FD45EE522489603000B7717B /* PadProvider.swift in Sources */,
-				FD45EE57248974B500B7717B /* DoNotDisturbPad.swift in Sources */,
-				FDF95A87248A5079008A6694 /* SoundPad.swift in Sources */,
+				FD45EE57248974B500B7717B /* CommandAction.swift in Sources */,
+				FDF95A87248A5079008A6694 /* SoundAction.swift in Sources */,
 				FD7017C82486C2B800C35835 /* CommandDispatcher.swift in Sources */,
 				FDF4BAAF248419B700718B73 /* ContentView.swift in Sources */,
+				FDF95A8B248C116D008A6694 /* DoNotDisturbAction.swift in Sources */,
 				FD45EE552489749600B7717B /* Pad.swift in Sources */,
 				FD45EE59248974E800B7717B /* PadArray.swift in Sources */,
 				FDF4BAAD248419B700718B73 /* AppDelegate.swift in Sources */,
 				FDE09EF824881EF600FC4F49 /* DoNotDisturbSwitcher.swift in Sources */,
+				FDF95A8D248C125B008A6694 /* ActionableProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,14 +384,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "LaunchPad Mac/LaunchPad_Mac.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "LaunchPad Mac/Resources/LaunchPad_Mac.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"LaunchPad Mac/Preview Content\"";
 				DEVELOPMENT_TEAM = X29V4JPQ55;
 				ENABLE_HARDENED_RUNTIME = NO;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "LaunchPad Mac/Info.plist";
+				INFOPLIST_FILE = "LaunchPad Mac/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -371,14 +407,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "LaunchPad Mac/LaunchPad_Mac.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "LaunchPad Mac/Resources/LaunchPad_Mac.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"LaunchPad Mac/Preview Content\"";
 				DEVELOPMENT_TEAM = X29V4JPQ55;
 				ENABLE_HARDENED_RUNTIME = NO;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "LaunchPad Mac/Info.plist";
+				INFOPLIST_FILE = "LaunchPad Mac/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",

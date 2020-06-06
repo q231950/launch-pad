@@ -14,10 +14,10 @@ class PadProvider: ObservableObject {
     var cancellableMIDISink: AnyCancellable?
 
     var rows = [PadArray(pads: [
-        CommandPad(identifier: 40),
-        SoundPad(identifier: 41, sound: "Purr"),
-        SoundPad(identifier: 42, sound: "Pop"),
-        DoNotDisturbPad(identifier: 43)]),
+        Pad(identifier: 40, action: Action.Command(command: "( cd ~ && ls )")),
+        Pad(identifier: 41, action: Action.Sound("Purr")),
+        Pad(identifier: 42, action: Action.Sound("Pop")),
+        Pad(identifier: 43, action: Action.DoNotDisturb())]),
                 PadArray(pads: [
                     Pad(identifier: 36),
                     Pad(identifier: 37),
