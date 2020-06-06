@@ -9,7 +9,14 @@ import Foundation
 
 class DoNotDisturbSwitcher {
 
-    private var on: Bool = false
+    private var on: Bool {
+        get {
+            CFPreferencesCopyValue(
+            "dndStart" as CFString,
+            "com.apple.notificationcenterui" as CFString,
+            kCFPreferencesCurrentUser, kCFPreferencesCurrentHost) != nil
+        }
+    }
 
     func toggle() {
         if on {
@@ -17,11 +24,9 @@ class DoNotDisturbSwitcher {
         } else {
             enableDND()
         }
-        on.toggle()
     }
 
     private func enableDND(){
-
         CFPreferencesSetValue("dndStart" as CFString, CGFloat(0) as CFPropertyList, "com.apple.notificationcenterui" as CFString, kCFPreferencesCurrentUser, kCFPreferencesCurrentHost)
 
         CFPreferencesSetValue("dndEnd" as CFString, CGFloat(1440) as CFPropertyList, "com.apple.notificationcenterui" as CFString, kCFPreferencesCurrentUser, kCFPreferencesCurrentHost)
