@@ -11,19 +11,19 @@ import CommandsCore
 extension Action {
 
     struct Command: Actionable {
-        let command: String
+        let commandText: String
 
         init(command: String) {
-            self.command = command
+            self.commandText = command
         }
 
         func perform() {
             DispatchQueue.main.async {
-                let command = CommandsCore.Command(launchPath: "/bin/zsh", arguments: ["-lc", self.command])
+                let command = CommandsCore.Command(launchPath: "/bin/zsh", arguments: ["-lc", self.commandText])
 
                 let commandDispatcher = CommandDispatcher()
 
-                commandDispatcher.dispatch(command: command)
+                commandDispatcher.dispatch(command: command, text: self.commandText)
             }
         }
     }

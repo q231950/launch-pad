@@ -10,7 +10,7 @@ import CommandsCore
 
 struct CommandDispatcher {
 
-    func dispatch(command: Command) {
+    func dispatch(command: Command, text: String) {
         let commandExecutor = CommandExecutor()
         commandExecutor.outputHandler = { text in
             print(text)
@@ -20,7 +20,7 @@ struct CommandDispatcher {
             let notification = NSUserNotification()
 
             notification.title = "exit(\(code))"
-            notification.subtitle = "cd ~ && ls"
+            notification.subtitle = text
 
             NSUserNotificationCenter.default.deliver(notification)
         }
