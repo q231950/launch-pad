@@ -18,7 +18,7 @@ struct ContentView: View {
                     ForEach(row.pads, id: \.self) { pad in
                         Rectangle()
                             .fill(self.fill(for: pad))
-                            .frame(width: 200, height: 200)
+                            .aspectRatio(1, contentMode: .fit)
                     }
                 }
             }
