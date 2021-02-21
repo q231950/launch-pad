@@ -16,21 +16,11 @@ struct ContentView: View {
             ForEach(padProvider.rows, id: \.self) { row in
                 HStack {
                     ForEach(row.pads, id: \.self) { pad in
-                        Rectangle()
-                            .fill(self.fill(for: pad))
-                            .aspectRatio(1, contentMode: .fit)
+                        PadView(pad: pad)
                     }
                 }
             }
         }
-    }
-
-    func fill(for pad: Pad) -> Color {
-        if pad.selected {
-            return Color.orange
-        }
-
-        return Color.black
     }
 }
 

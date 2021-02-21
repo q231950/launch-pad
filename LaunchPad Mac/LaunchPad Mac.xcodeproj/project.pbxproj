@@ -11,6 +11,7 @@
 		FD45EE552489749600B7717B /* Pad.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD45EE542489749600B7717B /* Pad.swift */; };
 		FD45EE57248974B500B7717B /* CommandAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD45EE56248974B500B7717B /* CommandAction.swift */; };
 		FD45EE59248974E800B7717B /* PadArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD45EE58248974E800B7717B /* PadArray.swift */; };
+		FD69D0FE24929ECA00DF09D7 /* PadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD69D0FD24929ECA00DF09D7 /* PadView.swift */; };
 		FD7017C82486C2B800C35835 /* CommandDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7017C72486C2B800C35835 /* CommandDispatcher.swift */; };
 		FDA88C302489760E00132B31 /* CommandsCore in Frameworks */ = {isa = PBXBuildFile; productRef = FDA88C2F2489760E00132B31 /* CommandsCore */; };
 		FDE09EF824881EF600FC4F49 /* DoNotDisturbSwitcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE09EF724881EF600FC4F49 /* DoNotDisturbSwitcher.swift */; };
@@ -30,6 +31,7 @@
 		FD45EE542489749600B7717B /* Pad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pad.swift; sourceTree = "<group>"; };
 		FD45EE56248974B500B7717B /* CommandAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandAction.swift; sourceTree = "<group>"; };
 		FD45EE58248974E800B7717B /* PadArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PadArray.swift; sourceTree = "<group>"; };
+		FD69D0FD24929ECA00DF09D7 /* PadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PadView.swift; sourceTree = "<group>"; };
 		FD7017C72486C2B800C35835 /* CommandDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandDispatcher.swift; sourceTree = "<group>"; };
 		FDE09EF724881EF600FC4F49 /* DoNotDisturbSwitcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoNotDisturbSwitcher.swift; sourceTree = "<group>"; };
 		FDF4BAA9248419B700718B73 /* LaunchPad Mac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LaunchPad Mac.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -67,6 +69,15 @@
 			path = "Pads & Pad Array";
 			sourceTree = "<group>";
 		};
+		FD69D0FC24929EBC00DF09D7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FDF4BAAE248419B700718B73 /* ContentView.swift */,
+				FD69D0FD24929ECA00DF09D7 /* PadView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		FD7017CA2486D12300C35835 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -95,7 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				FDF4BAAC248419B700718B73 /* AppDelegate.swift */,
-				FDF4BAAE248419B700718B73 /* ContentView.swift */,
+				FD69D0FC24929EBC00DF09D7 /* Views */,
 				FD45EE512489603000B7717B /* PadProvider.swift */,
 				FD45EE532489748A00B7717B /* Pads & Pad Array */,
 				FDF95A8524898316008A6694 /* Actions */,
@@ -247,6 +258,7 @@
 				FDF95A8B248C116D008A6694 /* DoNotDisturbAction.swift in Sources */,
 				FD45EE552489749600B7717B /* Pad.swift in Sources */,
 				FD45EE59248974E800B7717B /* PadArray.swift in Sources */,
+				FD69D0FE24929ECA00DF09D7 /* PadView.swift in Sources */,
 				FDF4BAAD248419B700718B73 /* AppDelegate.swift in Sources */,
 				FDE09EF824881EF600FC4F49 /* DoNotDisturbSwitcher.swift in Sources */,
 				FDF95A8D248C125B008A6694 /* ActionableProtocol.swift in Sources */,

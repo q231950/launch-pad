@@ -7,12 +7,12 @@
 
 import Foundation
 
-class Pad: Hashable {
+class Pad: Hashable, ObservableObject {
 
     let identifier: UInt8
     let uuid = UUID().uuidString
     var action: Actionable?
-    var selected: Bool = false {
+    @Published var selected: Bool = false {
         didSet {
             if selected {
                 action?.perform()
