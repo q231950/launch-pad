@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import CommandsCore
+import Commands
 
 struct CommandDispatcher {
 
