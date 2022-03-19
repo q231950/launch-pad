@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import CommandsCore
+import Commands
 
 extension Action {
 
@@ -19,7 +19,7 @@ extension Action {
 
         func perform() {
             DispatchQueue.main.async {
-                let command = CommandsCore.Command(launchPath: "/bin/zsh", arguments: ["-lc", self.commandText])
+                let command = Commands.Command(launchPath: "/bin/zsh", arguments: ["-lc", self.commandText])
 
                 let commandDispatcher = CommandDispatcher()
 

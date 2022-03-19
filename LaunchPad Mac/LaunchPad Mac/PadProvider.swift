@@ -33,7 +33,7 @@ class PadProvider: ObservableObject {
         }
     }
 
-    private func setPad(identifiedBy identifier: UInt8, selected: Bool) {
+    private func setPad(identifiedBy identifier: UInt8?, selected: Bool) {
         self.rows.reduce([Pad](), { (result, row) -> [Pad] in
             var x = result
             x.append(contentsOf: row.pads)
